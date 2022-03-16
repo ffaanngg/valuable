@@ -1,9 +1,11 @@
 // Reference : https://discordjs.guide/oauth2/#implicit-grant-flow
-
+import { useParams } from 'react-router-dom';
 
 function Auth() {
-  const fragment = new URLSearchParams(window.location.hash.slice(1));
-  const accessToken = fragment.get("access_token");
+
+  const params = useParams();
+  const accessToken = params['access_token'];
+
   if (!accessToken) {
     // Someone tried to access the route on its own
     window.location = "/";
@@ -13,6 +15,7 @@ function Auth() {
   localStorage.setItem("accessToken", accessToken);
 
   window.location = "/";
+  
   return null;
 }
 
