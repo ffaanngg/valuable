@@ -2,13 +2,17 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 
 function Play() {
-  const [user, setUser] = useState({ 1: 1 });
+  const accessToken = () => localStorage.getItem("accessToken");
 
+  // State for Discord user
+  const [user, setUser] = useState();
+
+  // Update user state by fetching from discord.com
   useEffect(() => {
     axios
       .get("https://discord.com/api/users/@me", {
         headers: {
-          authorization: `Bearer ${localStorage.getItem("accessToken")}`,
+          authorization: `Bearer ${accessToken()}`,
         },
       })
       .then((r) => {
@@ -16,7 +20,15 @@ function Play() {
       });
   }, []);
 
-  return <div>{JSON.stringify(user)}</div>;
+
+  return (
+    <div className="flex flex-wrap">
+        <div className="w-1/3 my-4 mx-4 bg-black h-screen">1</div>
+        <div className="w-2/3 my-4 mx-4 flex-1 h-screen bg-slate-200">2</div>
+      
+
+    </div>
+  )
 }
 
 export default Play;
