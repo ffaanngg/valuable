@@ -1,4 +1,5 @@
 import config from "../config.json";
+import Wrapper from '../components/Wrapper.jsx'
 
 function Login() {
   function signInWithDiscord() {
@@ -6,7 +7,7 @@ function Login() {
   }
 
   return (
-    <div className="w-screen h-screen bg-black bg-main bg-opacity-100 overflow-y-scroll">
+    <Wrapper>
       <div className="p-32 my-4 text-neutral-400">
         <div className="text-5xl font-bold font-heading">
           <h1 className="float-left text-slate-100 hover:text-green-400">Valuab</h1>
@@ -36,7 +37,7 @@ function Login() {
           Sign in with Discord
         </button>
       </div>
-    </div>
+    </Wrapper>
   );
 }
 
