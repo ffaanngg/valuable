@@ -14,7 +14,6 @@ function Auth() {
 
   // Access token has been stored so we redirect to / so that we can load Play.jsx
 
-  console.log(accessToken)
   localStorage.setItem("accessToken", accessToken);
   window.location = "/";
   

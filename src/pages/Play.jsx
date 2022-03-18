@@ -34,9 +34,9 @@ function Play() {
   return (
     user ? 
     <Wrapper>
-      <div className="flex flex-wrap">
-        <div className="w-1/3 my-4 mx-4 bg-white h-screen">{user}</div>
-        <div className="w-2/3 my-4 mx-4 flex-1 h-screen bg-slate-200">2</div>
+      <div className="flex flex-wrap p-6 h-screen text-neutral-200">
+        <div className="w-1/3 bg-neutral-800 bg-opacity-80 mr-2 rounded">{user}</div>
+        <div className="w-2/3 flex-1 bg-neutral-800 bg-opacity-80 ml-2 rounded">2</div>
       </div>
     </Wrapper> : <Loading/> 
   )

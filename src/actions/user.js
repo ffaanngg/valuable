@@ -17,9 +17,7 @@ export async function getSelf(token){
     }    
 
     return resp.data
-
-
-    
+  
 
 }
 
