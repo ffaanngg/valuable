@@ -15,7 +15,7 @@ function App() {
       <Routes>
         <Route path="/" element={isLoggedIn() ? <Play /> : <Login />} />
         <Route path="/auth" element={<Auth />} />
-        <Route path="*" element={<NotFound/>} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>
   );

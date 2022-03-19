@@ -1,15 +1,18 @@
-export default function Grid(props){
-    return <div className="m-auto grid w-full grid-cols-7 grid-rows-6">
-        {
-            Array.from(Array(6)).map(() => (
-                <div>
-                    {
-                        Array.from(Array(7)).map(() => (
-                            <div className="bg-neutral-700 rounded opacity-75 h-16 w-16 mt-4">A</div>   
-                        ))
-                    }
-                </div>
-            ))
-        }
+import Tile from "./Tile";
+
+export default function Grid(props) {
+  return (
+    <div className="flex flex-col items-center justify-center grow">
+      <div className="grid gap-2 p-10 box-border grid-cols-6">
+        {Array.from(Array(6)).map(() => (
+          <div>
+            {Array.from(Array(6)).map(() => (
+              <Tile colorCode={1}>a</Tile>
+            ))}
+          </div>
+        ))}
+      </div>
+      <div className="border-2 border-rose-400 p-24 mb-5"></div>
     </div>
+  );
 }
