@@ -8,6 +8,7 @@ import Grid from "../components/Grid.jsx";
 import LayoutKeyboard from "../components/LayoutKeyboard.jsx";
 import LeaderboardCard from "../components/LeaderboardCard.jsx";
 import { getLeaderboard, submitWord } from "../actions/game.js";
+import toast, { Toaster } from 'react-hot-toast';
 
 
 function Play() {
@@ -115,23 +116,23 @@ function Play() {
             })
       
             if(res.data.code === "WORD_GUESS_CORRECT"){
-              window.alert(res.data.message)
+              toast(res.data.message)
     
             }else{
-              window.alert(res.data.message)
+              toast(res.data.message)
             }
       
             if(guesses.length === 6 && !res.data.code === "WORD_GUESS_CORRECT"){
-              window.alert("Better luck next time!")
+              toast("Better luck next time!")
             }
             guesses.push([])
     
           }else{
             if(res.data.code === "GAME_ALREADY_OVER"){
-              window.alert(res.data.message)
+              toast(res.data.message)
               window.removeEventListener("keyup",keyHandler)
             }else if(res.data.code === "WORD_NOT_FOUND"){
-              window.alert(res.data.message)
+              toast(res.data.message)
     
             }
           }
@@ -185,7 +186,9 @@ function Play() {
           }}/>
         </div>
       </div>
+    <Toaster position="bottom-right"/>
     </Wrapper>
+    
   ) : (
     <Loading />
   );
