@@ -1,6 +1,6 @@
-// Action file with most of the auth related stuff...
-
 import axios from "axios";
+
+// Action file with most of the auth related stuff...
 
 const DISCORD_API = (route) => `https://discord.com/api${route}`;
 
@@ -19,4 +19,3 @@ export async function getSelf(token) {
   return resp.data;
 }
 
-export function getLeaderboard() {}
