@@ -5,7 +5,7 @@ export default function LeaderboardCard(props) {
         <h1 className="whitespace-nowrap overflow-hidden text-ellipsis">
           {props.data.playerName}
         </h1>
-        <h1>${Math.round(props.data.price)}</h1>
+        <h1>${Math.round(props.data.price * 100)/100}</h1>
       </div>
     </div>
   );
