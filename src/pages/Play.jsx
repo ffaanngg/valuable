@@ -119,6 +119,7 @@ function Play() {
           });
 
           if (res.data.code === "WORD_GUESS_CORRECT") {
+            window.removeEventListener("keyup", keyHandler);
             toast(res.data.message);
           } else {
             toast(res.data.message);
