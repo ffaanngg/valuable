@@ -37,7 +37,7 @@ function Play() {
     }
 
     fetchData();
-  }, []);
+  }, [navigate]);
 
   const guesses = [[]];
   let cursorSpace = 1;
@@ -82,7 +82,8 @@ function Play() {
     }
   }
 
-  const keyHandler = (t) => {
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  function keyHandler(t){
     if (t.key) {
       handleKey(t.key);
     } else {
@@ -156,7 +157,7 @@ function Play() {
 
   useEffect(() => {
     document.addEventListener("keyup", keyHandler);
-  }, []);
+  }, [keyHandler]);
 
   return user && leaderboard ? (
     <Wrapper>
