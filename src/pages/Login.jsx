@@ -24,7 +24,7 @@ function Login() {
           The structure of the game is similar to the original WORDLE except
           everytime you get the correct word, your letters are changed to a
           cryptocurrency based on the cryptocurrency's first letter and the
-          value is summed up.
+          prices of the cryptos are summed up.
           <br />
           <br />
           The goal? Play the perfect time when all the prices are peaking to get
