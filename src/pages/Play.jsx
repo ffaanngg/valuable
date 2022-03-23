@@ -99,6 +99,10 @@ function Play() {
 
       getResult(current.join("")).then((res) => {
         if (res.status === 200) {
+          
+          if (res.data.code === "WORD_GUESS_CORRECT") {
+            window.removeEventListener("keyup", keyHandler);
+          }
           guesses.push([]);
 
           current.forEach((c, i) => {
@@ -119,7 +123,6 @@ function Play() {
           });
 
           if (res.data.code === "WORD_GUESS_CORRECT") {
-            window.removeEventListener("keyup", keyHandler);
             toast(res.data.message);
           } else {
             toast(res.data.message);
