@@ -154,11 +154,11 @@ function Play() {
       delChar();
     }
   }
-  
+
   // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
     document.addEventListener("keyup", keyHandler);
-  });
+  },[]);
 
   return user && leaderboard ? (
     <Wrapper>
