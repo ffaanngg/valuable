@@ -9,9 +9,12 @@ export async function getLeaderboard() {
 
 export async function submitWord(word, token) {
   const res = await axios.post(
-    VALUABLE_API`/play` + `?word=${word}`,
+    VALUABLE_API`/play`,
     {},
     {
+      params: {
+        word: word
+      },
       headers: {
         authorization: token,
       },
