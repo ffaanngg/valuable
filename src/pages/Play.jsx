@@ -84,6 +84,7 @@ function Play() {
 
   // eslint-disable-next-line react-hooks/exhaustive-deps
   function keyHandler(t){
+    console.log(1)
     if (t.key) {
       handleKey(t.key);
     } else {
