@@ -1,25 +1,24 @@
 .simple-keyboard.myTheme1 {
-    background-color: rgb(38,38,38,1);
-    border-radius: 0;
-    border-bottom-right-radius: 5px;
-    border-bottom-left-radius: 5px;
-    width: 50%;
-    margin-left: auto;
-    margin-right: auto;
-    overflow: auto;
+  background-color: rgb(38, 38, 38, 1);
+  border-radius: 0;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: auto;
+}
 
-  }
-  
-  .simple-keyboard.myTheme1 .hg-button {
-    height: 50px;
-    justify-content: center;
-    align-items: center;
-    background: #404040;
-    color: white;
-    border-bottom: none;
-  }
-  
-  .simple-keyboard.myTheme1 .hg-button:active {
-    background: white;
-    color: #404040;
+.simple-keyboard.myTheme1 .hg-button {
+  height: 50px;
+  justify-content: center;
+  align-items: center;
+  background: #404040;
+  color: white;
+  border-bottom: none;
+}
+
+.simple-keyboard.myTheme1 .hg-button:active {
+  background: white;
+  color: #404040;
 }
