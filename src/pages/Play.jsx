@@ -102,9 +102,17 @@ function Play() {
           current.forEach((c, i) => {
             setTimeout(() => {
               const letterElement = document.getElementById(firstLetter + i);
+              const color = res.data.data.colors[i]
+
+              
               letterElement.style.backgroundColor = getColor(
-                Number(res.data.data.colors[i])
+                Number(color)
               );
+              if(Number(color) === 0){
+                letterElement.classList.add("animate__headShake")
+              }else{
+                letterElement.classList.add("animate__pulse")
+              }
             }, 200 * i + 1);
           });
 
@@ -114,7 +122,6 @@ function Play() {
             toast(res.data.message);
           }
 
-          console.log(guesses.length);
           if (
             guesses.length === 7 &&
             res.data.code === "WORD_GUESS_INCORRECT"
@@ -131,6 +138,10 @@ function Play() {
           }
         }
       });
+    }else{
+      const firstLetter = (guesses.length - 1) * 7 + 1;
+      const currentChar = firstLetter + (current.length)
+      document.getElementById(currentChar).classList.add("animate__flash")
     }
   }
   function handleKey(char) {
