@@ -99,7 +99,8 @@ function Play() {
 
       getResult(current.join("")).then((res) => {
         if (res.status === 200) {
-                    guesses.push([]);
+          
+          guesses.push([]);
 
           current.forEach((c, i) => {
             setTimeout(() => {
