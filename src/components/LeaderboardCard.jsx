@@ -1,7 +1,7 @@
 export default function LeaderboardCard(props) {
   return (
-    <div className="rounded-lg bg-neutral-800 mx-6 my-2 p-2 items-center drop-shadow-md">
-      <div className="text-neutral-400 text-xl font-heading ml-4 flex justify-between">
+    <div className="rounded-lg bg-neutral-800 mx-6 my-4 p-2 items-center drop-shadow-md">
+      <div className="text-neutral-400 text-2xl font-heading flex justify-center">
         <h1 className="whitespace-nowrap overflow-hidden text-ellipsis">
           {props.data.playerName}
         </h1>
