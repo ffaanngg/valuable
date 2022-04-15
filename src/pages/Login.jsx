@@ -1,13 +1,13 @@
-import config from "../config.json";
 import Wrapper from "../components/Wrapper.jsx";
 import Link from "../components/Link";
 import Button from "../components/Button.jsx";
 
 function Login() {
-  function signInWithDiscord() {
-    window.location = config.oauth;
-  }
+  // function signInWithDiscord() {
+  //   window.location = config.oauth;
+  // }
 
+  localStorage.setItem("firstTime",false)
   return (
     <Wrapper>
       <div className="p-32 my-4 text-neutral-400">
@@ -38,7 +38,7 @@ function Login() {
           for <Link href="https://discord.gg/builders">BuilderContests</Link>
         </p>
 
-        <Button onClick={signInWithDiscord}>Sign in with Discord</Button>
+        <Button onClick={() => window.location = "/play"}>Play</Button>
       </div>
     </Wrapper>
   );

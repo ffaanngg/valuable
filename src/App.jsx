@@ -10,11 +10,12 @@ function App() {
     return window.localStorage.getItem("accessToken");
   };
 
+
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={isLoggedIn() ? <Play /> : <Login />} />
-        <Route path="/auth" element={<Auth />} />
+        <Route path="/" element={<Login/>} />
+        <Route path="/play" element={<Play/>}/>
         <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>

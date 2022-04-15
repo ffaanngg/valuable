@@ -7,16 +7,13 @@ export async function getLeaderboard() {
   return (await axios.get(VALUABLE_API`/leaderboard`)).data;
 }
 
-export async function submitWord(word, token) {
+export async function submitWord(word) {
   const res = await axios.post(
     VALUABLE_API`/play`,
     {},
     {
       params: {
         word: word
-      },
-      headers: {
-        authorization: token,
       },
       validateStatus: (_) => true, // Axios has an annoying design of throwing HTTP errors as runtimes errors so prevent that
     }
